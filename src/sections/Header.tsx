@@ -13,7 +13,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 bg-midnight">
       <div className="container-page flex items-center justify-between py-4 sm:py-5">
-        <a href="#top" aria-label="Volition Workspaces, home" className="focus-ring" onClick={close}>
+        <a
+          href="#top"
+          aria-label="Volition Workspaces, home"
+          className="focus-ring"
+          onClick={close}
+        >
           <Logo />
         </a>
 
@@ -39,7 +44,11 @@ export function Header() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Primary" className="container-page flex flex-col pb-5 md:hidden">
+        <nav
+          id="mobile-nav"
+          aria-label="Primary"
+          className="container-page flex flex-col pb-5 md:hidden"
+        >
           {nav.map((l) => (
             <a key={l.href} href={l.href} className={navLink} onClick={close}>
               {l.label}

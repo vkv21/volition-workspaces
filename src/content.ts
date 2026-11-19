@@ -1,7 +1,6 @@
 import type { IconName } from "./components/ui/Icon";
 
-// All copy lives here. Items in [BRACKETS] are placeholders from the design
-// that still need real values.
+// All copy lives here.
 export const site = {
   name: "Volition",
   descriptor: "WORKSPACES",
@@ -9,8 +8,12 @@ export const site = {
   eyebrow: "MANAGED OFFICES · COWORKING",
   legal: "© 2026 Volition Systems Private Limited",
   footerLine: "Volition Workspaces · Managed offices · Coworking",
-  contact: ["[ADDRESS], [CITY]", "[PHONE]", "[EMAIL]"],
-  terms: "[TAXES, DEPOSIT AND LOCK-IN TERMS]",
+  contact: [
+    "No:HIG-9807, Tiruverkadu Rd, TNHB Colony, Ayappakkam, Chennai - 600077",
+    "+91-7200635442",
+    "adminkltowers@gmail.com",
+  ],
+  terms: "Contact us for availability, pricing and terms.",
 } as const;
 
 export const nav = [
@@ -25,11 +28,31 @@ export interface Amenity {
 }
 
 export const amenities: Amenity[] = [
-  { icon: "clean", title: "Clean workspaces", text: "Offices and desks kept clean for you." },
-  { icon: "wifi", title: "High-speed Wi-Fi", text: "Fast internet for the whole team." },
-  { icon: "ac", title: "Air conditioning", text: "Stay comfortable through the working day." },
-  { icon: "dining", title: "Common dining area", text: "A shared place to eat and take a break." },
-  { icon: "water", title: "Drinking water", text: "Safe drinking water on site." },
+  {
+    icon: "clean",
+    title: "Clean workspaces",
+    text: "Offices and desks kept clean for you.",
+  },
+  {
+    icon: "wifi",
+    title: "High-speed Wi-Fi",
+    text: "Fast internet for the whole team.",
+  },
+  {
+    icon: "ac",
+    title: "Air conditioning",
+    text: "Stay comfortable through the working day.",
+  },
+  {
+    icon: "dining",
+    title: "Common dining area",
+    text: "A shared place to eat and take a break.",
+  },
+  {
+    icon: "water",
+    title: "Drinking water",
+    text: "Safe drinking water on site.",
+  },
 ];
 
 export interface Plan {
@@ -50,7 +73,7 @@ export const plans: Plan[] = [
     variant: "solid",
     description: "A private, managed office for your startup or small company.",
     features: ["3 month or 11 month terms", "All amenities included", "Sized for your team"],
-    price: "[OFFICE PRICE]",
+    price: "Contact us",
     cta: "Ask about offices",
   },
   {
