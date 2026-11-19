@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+  }
+  body {
+    @apply bg-ivory font-sans text-ink antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Shared styles, defined once and reused by every component/section. */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-16;
+  }
+  .section-y {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-label sm:text-sm;
+  }
+  .heading-display {
+    @apply font-display text-5xl font-semibold leading-none tracking-display sm:text-6xl lg:text-[80px];
+  }
+  .heading-section {
+    @apply font-display text-3xl font-semibold leading-[1.08] tracking-display sm:text-4xl lg:text-5xl;
+  }
+  .heading-card {
+    @apply font-display text-xl font-semibold;
+  }
+  .body-lead {
+    @apply text-lg leading-normal sm:text-xl;
+  }
+  .body-base {
+    @apply text-[15px] leading-normal;
+  }
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral;
+  }
+  .input-field {
+    @apply h-12 w-full rounded-control border border-mist bg-ivory px-3.5 font-sans text-base text-ink focus-ring;
+  }
+}
