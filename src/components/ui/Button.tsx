@@ -21,8 +21,14 @@ interface Common {
   children: ReactNode;
 }
 
-type AnchorProps = Common & { href: string } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "className" | "children">;
-type NativeProps = Common & { href?: undefined } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children">;
+type AnchorProps = Common & { href: string } & Omit<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    "className" | "children"
+  >;
+type NativeProps = Common & { href?: undefined } & Omit<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    "className" | "children"
+  >;
 
 /** Renders an <a> when given `href`, otherwise a <button>. */
 export function Button(props: AnchorProps | NativeProps) {

@@ -12,7 +12,12 @@ interface MarkProps {
 }
 
 /** The V holding a coral dot. */
-export function LogoMark({ tone = "light", strokeClass, className = "h-10 w-10", label }: MarkProps) {
+export function LogoMark({
+  tone = "light",
+  strokeClass,
+  className = "h-10 w-10",
+  label,
+}: MarkProps) {
   const stroke = strokeClass ?? (tone === "light" ? "stroke-ivory" : "stroke-midnight");
   return (
     <svg
@@ -20,7 +25,13 @@ export function LogoMark({ tone = "light", strokeClass, className = "h-10 w-10",
       className={className}
       {...(label ? { role: "img", "aria-label": label } : { "aria-hidden": true })}
     >
-      <path d="M10 14 L32 52 L54 14" fill="none" strokeWidth="9" strokeLinejoin="miter" className={stroke} />
+      <path
+        d="M10 14 L32 52 L54 14"
+        fill="none"
+        strokeWidth="9"
+        strokeLinejoin="miter"
+        className={stroke}
+      />
       <circle cx="32" cy="16" r="6.5" className="fill-coral" />
     </svg>
   );
@@ -34,7 +45,11 @@ interface LogoProps {
 }
 
 /** Horizontal lockup: mark, wordmark, spaced descriptor. */
-export function Logo({ tone = "light", markClassName = "h-10 w-10", wordClassName = "text-2xl" }: LogoProps) {
+export function Logo({
+  tone = "light",
+  markClassName = "h-10 w-10",
+  wordClassName = "text-2xl",
+}: LogoProps) {
   return (
     <span className="flex items-center gap-3">
       <LogoMark tone={tone} className={markClassName} />

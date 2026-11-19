@@ -30,8 +30,22 @@ export function Contact() {
         </div>
 
         <form className="flex w-full max-w-[520px] flex-col gap-[18px]" onSubmit={onSubmit}>
-          <FormField id="vw-name" label="Your name" name="name" type="text" autoComplete="name" required />
-          <FormField id="vw-contact" label="Phone or email" name="contact" type="text" autoComplete="email" required />
+          <FormField
+            id="vw-name"
+            label="Your name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            required
+          />
+          <FormField
+            id="vw-contact"
+            label="Phone or email"
+            name="contact"
+            type="text"
+            autoComplete="email"
+            required
+          />
           <FormField id="vw-need" label="What do you need?" name="need" type="text" />
           <Button type="submit" size="lg" className="h-[52px]">
             Book a tour

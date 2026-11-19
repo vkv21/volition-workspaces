@@ -10,8 +10,8 @@ export function Hero() {
           <p className="eyebrow text-coral">{site.eyebrow}</p>
           <h1 className="heading-display text-ivory">{site.tagline}</h1>
           <p className="body-lead max-w-[520px] text-mist">
-            Fully managed offices for growing teams, on 3 or 11 month terms. A few hot desks for
-            freelancers at ₹4,000 per month.
+            Fully managed and flexible private offices for growing teams, on 3 or 11 month terms.
+            Comfortable solo workspaces at ₹4,000 per month.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button href="#contact" size="lg">

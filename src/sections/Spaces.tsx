@@ -12,7 +12,9 @@ export function Spaces() {
           const solid = p.variant === "solid";
           return (
             <Card key={p.id} variant={p.variant} className="gap-4 sm:gap-[18px] sm:p-9">
-              <h3 className={`font-display text-3xl font-semibold sm:text-4xl ${solid ? "" : "text-midnight"}`}>
+              <h3
+                className={`font-display text-3xl font-semibold sm:text-4xl ${solid ? "" : "text-midnight"}`}
+              >
                 {p.name}
               </h3>
               <p className={`text-base leading-normal sm:text-[17px] ${solid ? "text-mist" : ""}`}>
@@ -23,7 +25,9 @@ export function Spaces() {
                   <li key={f}>{f}</li>
                 ))}
               </ul>
-              <p className={`font-display text-3xl font-semibold ${solid ? "text-coral" : "text-midnight"}`}>
+              <p
+                className={`font-display text-3xl font-semibold ${solid ? "text-coral" : "text-midnight"}`}
+              >
                 {p.price}
                 {p.priceSuffix && (
                   <span className="ml-1 font-sans text-base font-medium">{p.priceSuffix}</span>
